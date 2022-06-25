@@ -1,0 +1,37 @@
+{
+    "manifest_version": 3,
+    "name": "Chrome Tab Deduplicator",
+    "description": "Close duplicate tabs in a Chrome window.",
+    "version": "1.0",
+    "author": "Paul Foryt",
+    "action": {
+        "default_icon": {
+            "16": "images/icons/icon-16.png",
+            "32": "images/icons/icon-32.png",
+            "48": "images/icons/icon-48.png",
+            "128": "images/icons/icon-128.png"
+        }
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "commands",
+        "tabs"
+    ],
+    "commands": {
+        "close-exact-tab-duplicates": {
+            "suggested_key": {
+                "default": "Ctrl+U",
+                "mac": "Command+U"
+            },
+            "description": "Close duplicate tabs with identical URLs in a window."
+        }
+    },
+    "icons": {
+        "16": "images/icons/icon-16.png",
+        "32": "images/icons/icon-32.png",
+        "48": "images/icons/icon-48.png",
+        "128": "images/icons/icon-128.png"
+    }
+}
